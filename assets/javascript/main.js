@@ -23,18 +23,26 @@ function submitButtonClicked() {
     
     }
 }
+//searching and displaying images
 
 function imgSearch(teamName) {
+    $(".Body").css("background-image", "url('../images/'+ teamName +'.jpg')");
+            console.log('../images/'+ teamName +'.jpg');
+    console.log(teamName);
     $.ajax({
             url: 'https://api.giphy.com/v1/gifs/search?q= ' + teamName + ' &api_key=p4T9lRM39gJf4pf18qdgNjkJJdPZI3CA',
             type: 'GET',
         })
         .done(function(response) {
             displayGif(response);
+            
         })
 }
 
-function displayGif(response) {
+
+// Displaying 10 images
+
+function displayGif(response) {    
     $('#teams').empty();
     for (var i = 0; i < 10; i++) {
         var rating = "g";
@@ -45,6 +53,8 @@ function displayGif(response) {
         image = '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">' + image + "</div>";
         $('#teams').append(image);
     }
+
+    // Animating or making image still
 
     $('.gifAnimation').on('click', function() {
         var state = $(this).attr('data-state');
