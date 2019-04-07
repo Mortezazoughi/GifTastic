@@ -1,0 +1,46 @@
+body {
+    background: url("../images/nfl-background.jpg") no-repeat center center fixed;
+    background-size: cover;    
+}
+
+
+h1 {
+    font-family: Lobster;
+    color: rgb(13, 13, 224);
+}
+
+.ratings {
+    color: rgb(55, 36, 226);
+    font-family: avenir;
+    font-size: 18px;
+}
+
+h1 {
+    color: white;
+    font-size: 45px;
+}
+
+.btn-primary {
+    margin-left: 10px;
+    background: rgba(65, 136, 230, 0.555);
+    color: rgb(16, 16, 37);
+}
+
+@media screen and (max-width: 480px) {
+    .movImage {
+        width: 500px;
+        height: 500px;
+    }
+    body {
+        background-color: red;
+    }
+}
+
+.form-control {
+    width: 30%;
+}
+
+#add {
+    font-size: 20px;
+    color: white;
+}
